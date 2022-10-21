@@ -1,9 +1,10 @@
 import random
+
 death = False
 niveau_de_vie = 20
 numero_adversaire = 0
-regles_du_jeu = ("Vous entrez un dongeon, vous avez 20 vies. \nvous arrivez face a face avec de monstres avec un niveau de pouvoir aleatoire entre 1 et 5. \nsi vous voulez les batre, appuiez 1, si vous gagnez, vous gagnez un nombre de vies egales au nombre de pouvoir au monstre.\nsi vous perdez, vous perdez le nombre de vie egale au pouvoir du monstre. votre attaque est aleatoire entre 1 et 6. \nsi vous voulez le contourner, apuiez 2.vous allez perdre une vie et aller a un prochain monstre. \nsi vous voulez quitter la partie, apuiez 4.")
 pdv = 0
+regles_du_jeu = ("Pour réussir un combat, il faut que la valeur du dé lancé soit supérieure à la force de l’adversaire.  Dans ce cas, le niveau de vie de l’usager est augmenté de la force de l’adversaire. Une défaite a lieu lorsque la valeur du dé lancé par l’usager est inférieure ou égale à la force de l’adversaire.  Dans ce cas, le niveau de vie de l’usager est diminué de la force de l’adversaire. La partie se termine lorsque les points de vie de l’usager tombent sous 0. L’usager peut combattre ou éviter chaque adversaire, dans le cas de l’évitement, il y a une pénalité de 1 point de vie.")
 
 
 def choice():

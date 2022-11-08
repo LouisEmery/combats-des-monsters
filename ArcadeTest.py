@@ -1,5 +1,5 @@
 import arcade
-import os
+
 path = r'C:\Utilisateurs\emerylo\Documents'
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480

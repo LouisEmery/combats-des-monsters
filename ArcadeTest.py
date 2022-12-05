@@ -26,8 +26,10 @@ def choice():
     global choix
     global vc
     choix = int(input("Que voulez vous faire?\n1: Attacker le monstre\n2: Controuner cet adversaire(-1 vie)\n3: Afficher les regles du jeu\n4: Quitter la partie"))
+    #choix 3, afficher les regles.
     if choix == 3:
         print(regles_du_jeu)
+        #choix 1, attacker le monstre
     elif choix == 1:
         dice_roll1 = random.randint(1, 6)
         dice_roll2 = random.randint(1, 6)
@@ -36,6 +38,7 @@ def choice():
         if dice_roll <= force_adversaire:
             niveau_de_vie -= force_adversaire
             vc = 0
+            #prendre les dégats s'il perd#
             if niveau_de_vie <= 0:
                 print("vous etes mort apres", pdv, "monstres")
                 death = True
@@ -47,13 +50,15 @@ def choice():
             pdv += 1
             vc += 1
             print("vous avez reussi\n+1 point de victoire!\nil vous reste", niveau_de_vie, "vies\n")
-
+#esquiver le monstre
     elif choix == 2:
         niveau_de_vie -= 1
         print("vous avez", niveau_de_vie, "vies\n")
+        #morts
         if niveau_de_vie <= 0:
             print("vous etes mort apres", pdv, "monstres")
             death = True
+            #mort(choix 4)
     elif choix == 4:
         death = True
 
